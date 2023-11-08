@@ -13,7 +13,7 @@ prompt = PromptTemplate(
 
 st.title('Chatbot')
 llm = HuggingFaceHub(
-    huggingfacehub_api_token='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',
+    huggingfacehub_api_token=os.environ.get('HUGGINGFACEHUB_API_TOKEN'),
     repo_id="mistralai/Mistral-7B-Instruct-v0.1",
     model_kwargs={'temperature': 0.2, 'max_tokens': -1}
 )
